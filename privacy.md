@@ -1,7 +1,7 @@
 # TiMe — Privacy Policy
 
-**Last updated:** [RELEASE DATE]
-**Effective:** [RELEASE DATE]
+**Last updated:** 13 October 2026
+**Effective:** 13 October 2026
 
 ---
 

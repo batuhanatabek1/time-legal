@@ -1,7 +1,7 @@
 # TiMe — Gizlilik Politikası
 
-**Son güncelleme:** [YAYIN TARİHİ]
-**Yürürlük tarihi:** [YAYIN TARİHİ]
+**Son güncelleme:** 13 Ekim 2026
+**Yürürlük tarihi:** 13 Ekim 2026
 
 ---
 
