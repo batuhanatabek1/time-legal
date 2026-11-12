@@ -1,7 +1,7 @@
 # TiMe — Privacy Policy
 
-**Last updated:** 13 October 2026
-**Effective:** 13 October 2026
+**Last updated:** 12 November 2026
+**Effective:** 12 November 2026
 
 ---
 
@@ -29,7 +29,7 @@ Details below.
 | | |
 |---|---|
 | Name | Batuhan Atabek |
-| Address | [ADDRESS — TO BE COMPLETED] |
+| Address | Antalya, Türkiye — requests can be sent by email |
 | Email | atabeksoft+privacy@gmail.com |
 
 This policy applies to the TiMe iOS application.
@@ -146,14 +146,17 @@ transferred to servers outside your country.
 | Recipient | Role | Country |
 |---|---|---|
 | Cloudflare, Inc. | Proxy server | USA |
-| Google LLC | AI provider (Gemini) | USA |
+| Google LLC | AI provider — one-off comment (Gemini) | USA |
+| Anthropic, PBC | AI provider — chat (Claude) | USA |
 
 This transfer relies on your **explicit consent.** If you do not consent,
 no data is transferred and the app continues to work on-device.
 
 Our proxy does **not log** your health data.
 
-Google's data handling: https://ai.google.dev/gemini-api/terms
+Providers' data terms:
+- Google: https://ai.google.dev/gemini-api/terms
+- Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
 
@@ -227,5 +230,5 @@ above. For material changes we will ask for your consent again.
 ## 11. Contact
 
 **Batuhan Atabek**
-[ADDRESS — TO BE COMPLETED]
+Antalya, Türkiye — requests can be sent by email
 atabeksoft+privacy@gmail.com

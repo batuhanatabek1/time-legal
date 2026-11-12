@@ -4,8 +4,7 @@
 > **A)** Aydınlatma metni — uygulama içinde her zaman erişilebilir olmalı
 > **B)** Açık rıza beyanları — her biri ayrı ayrı onaylanır
 >
-> **Not:** Bu metin hukuki inceleme beklemektedir. Adres ve VERBİS alanları
-> doldurulmamıştır.
+> **Not:** Bu metin hukuki inceleme beklemektedir.
 
 ---
 
@@ -19,9 +18,9 @@ hazırlanmıştır.
 | | |
 |---|---|
 | Unvan | Batuhan Atabek |
-| Adres | [ADRES — DOLDURULACAK] |
+| Adres | Antalya, Türkiye — başvurular e-posta ile yapılabilir |
 | E-posta | atabeksoft+privacy@gmail.com |
-| VERBİS | [VERBİS DURUMU — DOLDURULACAK] |
+| VERBİS | Kişisel Verileri Koruma Kurulu'nun 04.09.2025 tarihli ve 2025/1572 sayılı Kararı uyarınca kayıt yükümlülüğünden istisna (yıllık çalışan sayısı 10'dan ve yıllık mali bilanço toplamı 10 milyon TL'den az olan veri sorumlusu). İstisna, KVKK'nın diğer yükümlülüklerini ortadan kaldırmaz. |
 
 ## 2. İşlenen kişisel veriler
 
@@ -76,7 +75,8 @@ verdiğiniz açık rıza ile:
 | Alıcı | Aktarılan veri | Amaç |
 |---|---|---|
 | Cloudflare, Inc. (ABD) | Yapay zekâ isteği içeriği (aracı sunucu) | İstek yönlendirme, kötüye kullanım önleme |
-| Google LLC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, yazdığınız sohbet mesajları, dil | Yorum ve sohbet üretimi (Gemini) |
+| Google LLC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, dil | Tek seferlik yorum üretimi (Gemini) |
+| Anthropic, PBC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, yazdığınız sohbet mesajları, dil | Sohbet yanıtı üretimi (Claude) |
 | RevenueCat, Inc. (ABD) | Anonim kullanıcı kimliği, abonelik durumu | Abonelik doğrulama |
 
 Bu aktarımlar KVKK m.9 kapsamında **açık rızanıza** dayanır. Rıza
@@ -140,7 +140,7 @@ yazabilirsiniz. Başvurunuz en geç 30 gün içinde sonuçlandırılır.
 > uzunluklarım, döngü evrem, seçtiğim belirti etiketleri ve sohbet
 > ekranına yazdığım mesajların yorum üretilmesi amacıyla yurt dışında
 > bulunan aracı sunucuya (Cloudflare, Inc. — ABD) ve yapay zekâ
-> sağlayıcısına (Google LLC — ABD) aktarılmasına açık rıza veriyorum.
+> sağlayıcılarına (Google LLC ve Anthropic, PBC — ABD) aktarılmasına açık rıza veriyorum.
 >
 > Bu verilerin özel nitelikli sağlık verisi içerdiğini ve aktarımın yurt
 > dışına yapıldığını anlıyorum.

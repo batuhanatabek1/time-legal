@@ -1,7 +1,7 @@
 # TiMe — Gizlilik Politikası
 
-**Son güncelleme:** 13 Ekim 2026
-**Yürürlük tarihi:** 13 Ekim 2026
+**Son güncelleme:** 12 Kasım 2026
+**Yürürlük tarihi:** 12 Kasım 2026
 
 ---
 
@@ -29,9 +29,9 @@ Her birinin ayrıntısı aşağıdadır.
 | | |
 |---|---|
 | Unvan | Batuhan Atabek |
-| Adres | [ADRES — DOLDURULACAK] |
+| Adres | Antalya, Türkiye — başvurular e-posta ile yapılabilir |
 | E-posta | atabeksoft+privacy@gmail.com |
-| VERBİS kaydı | [VERBİS DURUMU — DOLDURULACAK] |
+| VERBİS kaydı | Kişisel Verileri Koruma Kurulu'nun 04.09.2025 tarihli ve 2025/1572 sayılı Kararı uyarınca kayıt yükümlülüğünden istisna (yıllık çalışan sayısı 10'dan ve yıllık mali bilanço toplamı 10 milyon TL'den az olan veri sorumlusu). İstisna, KVKK'nın diğer yükümlülüklerini ortadan kaldırmaz. |
 
 Bu politika yalnızca TiMe iOS uygulaması için geçerlidir.
 
@@ -156,7 +156,8 @@ listelenen veriler yurt dışında bulunan sunuculara aktarılır.
 | Alıcı | Rol | Ülke |
 |---|---|---|
 | Cloudflare, Inc. | Aracı sunucu (proxy) | ABD |
-| Google LLC | Yapay zekâ sağlayıcısı (Gemini) | ABD |
+| Google LLC | Yapay zekâ sağlayıcısı — tek seferlik yorum (Gemini) | ABD |
+| Anthropic, PBC | Yapay zekâ sağlayıcısı — sohbet (Claude) | ABD |
 
 Bu aktarım, KVKK kapsamında **açık rızanıza** dayanmaktadır. Onay
 vermezseniz hiçbir veriniz yurt dışına aktarılmaz ve uygulama cihaz üstü
@@ -164,8 +165,9 @@ ve kural tabanlı olarak çalışmaya devam eder.
 
 Aracı sunucumuz sağlık verinizi **kayıt altına almaz (loglamaz).**
 
-Google'ın veri işleme uygulamaları için:
-https://ai.google.dev/gemini-api/terms
+Sağlayıcıların veri işleme koşulları:
+- Google: https://ai.google.dev/gemini-api/terms
+- Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
 
@@ -252,5 +254,5 @@ yeniden isteriz.
 ## 11. İletişim
 
 **Batuhan Atabek**
-[ADRES — DOLDURULACAK]
+Antalya, Türkiye — başvurular e-posta ile yapılabilir
 atabeksoft+privacy@gmail.com
