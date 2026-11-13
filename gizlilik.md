@@ -1,7 +1,7 @@
 # TiMe — Gizlilik Politikası
 
-**Son güncelleme:** 12 Kasım 2026
-**Yürürlük tarihi:** 12 Kasım 2026
+**Son güncelleme:** 13 Kasım 2026
+**Yürürlük tarihi:** 13 Kasım 2026
 
 ---
 
@@ -15,7 +15,7 @@ analitik yazılımı bulunmuyor.
 Verinin cihazınızdan çıktığı durumlar sınırlıdır ve her biri sizin açık
 tercihinize bağlıdır:
 
-1. **Yapay zekâ yorumu ve sohbeti** — cihaz üstü model kullanılamadığında
+1. **Yapay zekâ yorumu ve sohbeti** — cihaz üstü model kullanılamadığında ya da sohbet için çevrimiçi modeli siz açtığınızda
    ve siz açıkça onay verdiğinizde
 2. **Apple Sağlık (HealthKit)** ile veri alışverişi — siz izin verdiğinizde
 3. **Abonelik işlemleri** — satın alma yaptığınızda
@@ -63,6 +63,8 @@ nedenle cihaz üstü saklamadır.
 
 TiMe, döngünüz hakkında yorum üretmek için önce **cihazınızın kendi yapay
 zekâ modelini** kullanır. Bu durumda hiçbir veri cihazınızdan çıkmaz.
+
+Ayrıca rıza verdiyseniz Ayarlar'dan "Sohbette daha güçlü çevrimiçi model" seçeneğini açabilirsiniz. Açıksa, cihazınız modeli desteklese bile sohbet mesajlarınız aşağıdaki kurallarla önce çevrimiçi modele gider. Bu seçenek varsayılan olarak kapalıdır ve tek seferlik yorumları etkilemez.
 
 Cihazınız bu modeli desteklemiyorsa size bir kez sorulur ve **yalnızca
 onay verirseniz** aşağıdaki veriler şifreli bağlantı üzerinden bir aracı

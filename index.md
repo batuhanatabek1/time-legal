@@ -35,3 +35,19 @@ respond to messages within 30 days.
 **Legal documents:**
 - [Privacy Policy](privacy.html)
 - [Gizlilik Politikası (Turkish)](gizlilik.html)
+
+---
+
+## Other languages / Weitere Sprachen / Autres langues
+
+| | Privacy policy | KVKK notice |
+|---|---|---|
+| Deutsch | [Datenschutzerklärung](privacy-de.html) | [KVKK-Hinweis](kvkk-de.html) |
+| Français | [Politique de confidentialité](privacy-fr.html) | [Notice KVKK](kvkk-fr.html) |
+| Español | [Política de privacidad](privacy-es.html) | [Aviso KVKK](kvkk-es.html) |
+| Italiano | [Informativa sulla privacy](privacy-it.html) | [Informativa KVKK](kvkk-it.html) |
+| Português (Brasil) | [Política de privacidade](privacy-pt.html) | [Aviso KVKK](kvkk-pt.html) |
+| 日本語 | [プライバシーポリシー](privacy-ja.html) | [KVKK通知](kvkk-ja.html) |
+| 한국어 | [개인정보 처리방침](privacy-ko.html) | [KVKK 안내](kvkk-ko.html) |
+| 简体中文 | [隐私政策](privacy-zh.html) | [KVKK 告知](kvkk-zh.html) |
+| English | [Privacy Policy](privacy.html) | [KVKK notice](kvkk-en.html) |

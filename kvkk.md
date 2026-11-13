@@ -136,7 +136,7 @@ yazabilirsiniz. Başvurunuz en geç 30 gün içinde sonuçlandırılır.
 
 ## B.2 — Yapay zekâ yorumu için yurt dışına aktarım
 
-> Cihazımın yapay zekâ modelini desteklemediği durumlarda; döngü
+> Cihazımın yapay zekâ modelini desteklemediği durumlarda ya da sohbet için çevrimiçi modeli açtığımda; döngü
 > uzunluklarım, döngü evrem, seçtiğim belirti etiketleri ve sohbet
 > ekranına yazdığım mesajların yorum üretilmesi amacıyla yurt dışında
 > bulunan aracı sunucuya (Cloudflare, Inc. — ABD) ve yapay zekâ

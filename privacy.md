@@ -1,7 +1,7 @@
 # TiMe — Privacy Policy
 
-**Last updated:** 12 November 2026
-**Effective:** 12 November 2026
+**Last updated:** 13 November 2026
+**Effective:** 13 November 2026
 
 ---
 
@@ -15,7 +15,7 @@ app contains no analytics software.
 Your data leaves your device only in these situations, each requiring your
 explicit choice:
 
-1. **AI commentary and chat** — when the on-device model is unavailable
+1. **AI commentary and chat** — when the on-device model is unavailable, or when you turn on the online model for chat,
    and you have given consent
 2. **Apple Health (HealthKit)** exchange — when you grant permission
 3. **Subscription purchases**
@@ -61,6 +61,8 @@ architecture is on-device storage.
 
 TiMe first uses **your device's own AI model** to generate commentary. In
 this case no data leaves your device.
+
+If you have given consent, you can also turn on "Smarter chat with the online model" in Settings. When it is on, your chat messages go to the online model first under the rules below, even if your device supports the on-device model. It is off by default and does not affect one-off comments.
 
 If your device does not support this model, you are asked once, and **only
 if you consent** is the following sent over an encrypted connection to a
