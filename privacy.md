@@ -9,16 +9,15 @@
 
 TiMe is a menstrual cycle tracking app. Your data is **stored on your
 device by default.** No account is required. We do not keep your cycle
-data on our servers. We do not share data with advertising networks. The
-app contains no analytics software.
+data on our servers. We do not share data with advertising networks. Usage analytics runs only if you turn it on in Settings; your health data never goes to analytics.
 
-Your data leaves your device only in these situations, each requiring your
-explicit choice:
+Your data leaves your device only in these situations, each under your control:
 
 1. **AI commentary and chat** — when the on-device model is unavailable, or when you turn on the online model for chat,
    and you have given consent
 2. **Apple Health (HealthKit)** exchange — when you grant permission
 3. **Subscription purchases**
+4. **Crash reports and usage analytics** — crash reports are on by default and can be turned off; usage analytics only if you turn it on
 
 Details below.
 
@@ -110,13 +109,18 @@ To prevent abuse of AI requests, a randomly generated identifier (UUID) is
 created on your device. It cannot be linked to you, is used only to count
 daily requests, and resets when the app is deleted.
 
+**e) Crash reports and usage analytics (Google Firebase)**
+
+- **Crash reports (Firebase Crashlytics):** If the app crashes, the code location of the error, device model, iOS version, app version and a random installation ID are sent to Google. The report contains no cycles, symptoms, notes or other health data. On by default; turn it off in Settings > Privacy > "Crash reports".
+- **Usage analytics (Firebase Analytics):** **Off** by default; it runs only if you turn on Settings > Privacy > "Usage analytics". When on, which main screens are opened, onboarding completion, the subscription screen being shown and purchase steps (including the product name) are sent, with a random app ID. Cycles, symptoms, dates, notes and chat content are **never** sent. It also sends that a chat message was sent (without its content) and the result of restoring purchases. Firebase also automatically records basic information such as first open, session start, time in app, device model, iOS version and approximate country derived from the IP address. The advertising identifier (IDFA) is not collected and ad personalization is off. Turning the option off deletes the analytics ID on your device.
+
 ### 2.3 Data we do not collect
 
 - Name, email, phone number
 - Location
 - Advertising identifier (IDFA)
 - Contacts, photos, camera, microphone
-- Usage analytics (the app contains no analytics SDK)
+- Any analytics that contains health data
 
 ### 2.4 Features not currently offered
 
@@ -150,14 +154,15 @@ transferred to servers outside your country.
 | Cloudflare, Inc. | Proxy server | USA |
 | Google LLC | AI provider — one-off comment (Gemini) | USA |
 | Anthropic, PBC | AI provider — chat (Claude) | USA |
+| Google LLC | Crash reports and usage analytics (Firebase) — §2.2(e) | USA |
 
-This transfer relies on your **explicit consent.** If you do not consent,
-no data is transferred and the app continues to work on-device.
+AI and usage analytics transfers rely on your **explicit consent.** Crash reports contain no health data; if you don't want them sent, turn crash reports off in Settings. If you do not consent to AI, your cycle and symptom data is not transferred and the app continues to work on-device.
 
 Our proxy does **not log** your health data.
 
 Providers' data terms:
 - Google: https://ai.google.dev/gemini-api/terms
+- Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -168,6 +173,8 @@ Providers' data terms:
 - **Data sent to the AI provider:** not retained by us after the response
   is generated.
 - **Abuse-prevention identifier:** 24 hours.
+- **Crash reports:** up to 90 days in Google Firebase.
+- **Usage analytics:** event-level data up to 2 months in Google Analytics.
 - **Subscription records:** as required by law, held by Apple and
   RevenueCat.
 

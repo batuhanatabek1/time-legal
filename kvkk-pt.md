@@ -37,6 +37,8 @@ Pessoais ("KVKK").
 - Dados de segurança das operações: um identificador aleatório do
   aparelho (UUID) gerado pelo app
 - Preferências do app: idioma, unidades, horários de notificação
+- Dados técnicos (podem ser desativados em Ajustes): detalhes do erro no momento de uma falha, modelo do aparelho, versão do iOS e do app, identificador de instalação aleatório
+- Dados de uso (só se você ativar): telas principais abertas, tela de assinatura e etapas de compra, envio de mensagem na conversa (sem conteúdo), resultado da restauração de compras, modelo do aparelho, versão do iOS, país aproximado, identificador de app aleatório
 
 **Dados não coletados:** nome, sobrenome, e-mail, telefone, número de
 identidade, localização, identificador de publicidade.
@@ -50,6 +52,8 @@ identidade, localização, identificador de publicidade.
 - Trocar dados com o app Apple Saúde
 - Gerenciar assinaturas
 - Evitar o uso indevido do serviço
+- Detectar e corrigir erros do app (relatórios de falhas)
+- Melhorar o app (análise de uso, opcional)
 
 ## 4. Base legal
 
@@ -59,20 +63,20 @@ explícito nos termos do art. 6 da KVKK.**
 Outros dados:
 - Gestão de assinaturas: KVKK art. 5/2-c (execução de contrato)
 - Prevenção de uso indevido: KVKK art. 5/2-f (legítimo interesse)
+- Relatórios de falhas: KVKK art. 5/2-f (legítimo interesse); podem ser desativados em Ajustes
+- Análise de uso: KVKK art. 5/1 (consentimento explícito, dado ao ativar a opção em Ajustes)
 
 ## 5. Forma de coleta
 
 Você insere os dados diretamente no app. Com sua permissão, eles também
-podem ser lidos do app Apple Saúde. Nenhum dado pessoal é coletado
-automaticamente em segundo plano.
+podem ser lidos do app Apple Saúde. Os únicos dados coletados automaticamente em segundo plano são os relatórios de falhas, que você pode desativar em Ajustes; a análise de uso só é coletada se você ativar. Nenhum deles contém dados de saúde.
 
 ## 6. Transferências
 
 **Transferências nacionais:** nenhuma. Seus dados de ciclo e sintomas não
 são transferidos aos nossos servidores; ficam no seu aparelho.
 
-**Transferências internacionais:** apenas nos casos abaixo e apenas com
-seu consentimento explícito separado:
+**Transferências internacionais:** apenas para os destinatários abaixo. As transferências que contêm dados de saúde (Cloudflare, Google Gemini, Anthropic) e a análise de uso só acontecem com seu consentimento explícito separado:
 
 | Destinatário | Dados transferidos | Finalidade |
 |---|---|---|
@@ -80,16 +84,16 @@ seu consentimento explícito separado:
 | Google LLC (EUA) | Duração dos ciclos, fase, etiquetas de sintomas, idioma | Comentários avulsos (Gemini) |
 | Anthropic, PBC (EUA) | Duração dos ciclos, fase, etiquetas de sintomas, mensagens da conversa, idioma | Respostas da conversa (Claude) |
 | RevenueCat, Inc. (EUA) | ID de usuário anônimo, status da assinatura | Verificação da assinatura |
+| Google LLC (EUA) — Firebase Crashlytics | Detalhes do erro no momento de uma falha, modelo do aparelho, versão, identificador de instalação | Detecção de erros (pode ser desativada em Ajustes) |
+| Google LLC (EUA) — Firebase Analytics | Telas abertas, etapas de compra, mensagem enviada na conversa (sem conteúdo), modelo do aparelho, país aproximado, identificador de app | Melhorar o app (só se você ativar) |
 
-Essas transferências se baseiam no seu **consentimento explícito** nos
-termos do art. 9 da KVKK. Sem consentimento, o app continua funcionando
+As transferências que contêm dados de saúde e a análise de uso se baseiam no seu **consentimento explícito** nos termos do art. 9 da KVKK. Os relatórios de falhas e a verificação de assinatura não contêm dados de saúde. Sem consentimento, o app continua funcionando
 no aparelho e por regras; nenhuma função essencial é desativada.
 
 ## 7. Prazo de retenção
 
 Seus dados ficam no aparelho até você excluí-los. Ao excluir o app, os
-dados do aparelho também são excluídos. Não guardamos os dados enviados
-ao provedor de IA.
+dados do aparelho também são excluídos. Não guardamos os dados enviados ao provedor de IA. Os relatórios de falhas ficam no Google Firebase por até 90 dias e a análise de uso no nível de evento por até 2 meses.
 
 ## 8. Seus direitos (KVKK art. 11)
 

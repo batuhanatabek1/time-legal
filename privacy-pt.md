@@ -13,15 +13,15 @@
 O TiMe é um app de acompanhamento do ciclo menstrual. Seus dados ficam
 **armazenados no seu aparelho por padrão.** Não é preciso criar conta. Não
 guardamos seus dados de ciclo em nossos servidores. Não compartilhamos
-dados com redes de publicidade. O app não tem software de análise.
+dados com redes de publicidade. A análise de uso só funciona se você ativá-la em Ajustes; seus dados de saúde nunca vão para a análise.
 
-Seus dados só saem do aparelho nestas situações, e cada uma exige sua
-escolha explícita:
+Seus dados só saem do aparelho nestas situações, e cada uma fica sob seu controle:
 
 1. **Comentários de IA e conversa** — quando você ativa o modelo online na conversa ou quando o modelo no aparelho não está
    disponível e você deu consentimento
 2. **Troca com o Apple Saúde (HealthKit)** — quando você dá permissão
 3. **Compras de assinatura**
+4. **Relatórios de falhas e análise de uso** — os relatórios de falhas ficam ativados por padrão e podem ser desativados; a análise de uso só se você ativar
 
 Detalhes abaixo.
 
@@ -116,13 +116,18 @@ Para evitar abuso das solicitações de IA, um identificador aleatório
 para contar as solicitações diárias e é redefinido quando o app é
 excluído.
 
+**e) Relatórios de falhas e análise de uso (Google Firebase)**
+
+- **Relatórios de falhas (Firebase Crashlytics):** se o app falhar, o local do erro no código, o modelo do aparelho, a versão do iOS, a versão do app e um identificador de instalação aleatório são enviados ao Google. O relatório não contém ciclos, sintomas, notas nem outros dados de saúde. Ativados por padrão; desative em Ajustes > Privacidade > "Relatórios de falhas".
+- **Análise de uso (Firebase Analytics):** **desativada** por padrão; só funciona se você ativar Ajustes > Privacidade > "Análise de uso". Quando ativada, são enviados quais telas principais são abertas, a conclusão da configuração inicial, a exibição da tela de assinatura e as etapas de compra (incluindo o nome do produto), com um identificador de app aleatório. Ciclos, sintomas, datas, notas e conteúdo da conversa **nunca** são enviados. Também são enviados o fato de que uma mensagem foi enviada na conversa (sem o conteúdo) e o resultado da restauração de compras. O Firebase também registra automaticamente informações básicas, como primeira abertura, início de sessão, tempo de uso, modelo do aparelho, versão do iOS e país aproximado deduzido do endereço IP. O identificador de publicidade (IDFA) não é coletado e a publicidade personalizada fica desativada. Ao desativar a opção, o identificador de análise no seu aparelho é apagado.
+
 ### 2.3 Dados que não coletamos
 
 - Nome, e-mail, telefone
 - Localização
 - Identificador de publicidade (IDFA)
 - Contatos, fotos, câmera, microfone
-- Análises de uso (o app não tem SDK de análise)
+- Qualquer análise que contenha dados de saúde
 
 ### 2.4 Recursos não oferecidos no momento
 
@@ -156,15 +161,15 @@ Se você consentir com comentários de IA online, os dados listados no
 | Cloudflare, Inc. | Servidor proxy | EUA |
 | Google LLC | Provedor de IA — comentário avulso (Gemini) | EUA |
 | Anthropic, PBC | Provedor de IA — conversa (Claude) | EUA |
+| Google LLC | Relatórios de falhas e análise de uso (Firebase) — §2.2(e) | EUA |
 
-Essa transferência se baseia no seu **consentimento específico.** Sem
-consentimento, nenhum dado é transferido e o app continua funcionando no
-aparelho.
+As transferências de IA e de análise de uso se baseiam no seu **consentimento específico.** Os relatórios de falhas não contêm dados de saúde; se não quiser enviá-los, desative-os em Ajustes. Sem consentimento para a IA, seus dados de ciclo e sintomas não são transferidos e o app continua funcionando no aparelho.
 
 Nosso proxy **não registra** seus dados de saúde.
 
 Termos de dados dos provedores:
 - Google: https://ai.google.dev/gemini-api/terms
+- Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -175,6 +180,8 @@ Termos de dados dos provedores:
 - **Dados enviados ao provedor de IA:** não são guardados por nós depois
   que a resposta é gerada.
 - **Identificador antiabuso:** 24 horas.
+- **Relatórios de falhas:** até 90 dias no Google Firebase.
+- **Análise de uso:** dados no nível de evento por até 2 meses no Google Analytics.
 - **Registros de assinatura:** conforme exigido por lei, mantidos pela
   Apple e pelo RevenueCat.
 

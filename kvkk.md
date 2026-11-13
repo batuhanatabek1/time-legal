@@ -35,6 +35,10 @@ hazırlanmıştır.
 - İşlem güvenliği verileri: uygulama tarafından üretilen rastgele cihaz
   kimliği (UUID)
 - Uygulama tercihleri: dil, birim, bildirim saatleri
+- Teknik veriler (Ayarlar'dan kapatılabilir): çökme anındaki hata bilgisi,
+  cihaz modeli, iOS ve uygulama sürümü, rastgele kurulum kimliği
+- Kullanım verileri (yalnızca siz açarsanız): açılan ana ekranlar,
+  abonelik ekranı ve satın alma adımları, sohbette mesaj gönderildiği bilgisi (içerik olmadan), satın alımları geri yükleme sonucu, cihaz modeli, iOS sürümü, yaklaşık ülke, rastgele uygulama kimliği
 
 **Toplanmayan veriler:** ad, soyad, e-posta, telefon, T.C. kimlik
 numarası, konum, reklam kimliği.
@@ -48,6 +52,8 @@ numarası, konum, reklam kimliği.
 - Apple Sağlık uygulamasıyla veri alışverişi
 - Abonelik yönetimi
 - Hizmetin kötüye kullanılmasının önlenmesi
+- Uygulama hatalarının tespiti ve giderilmesi (çökme raporları)
+- Uygulamanın geliştirilmesi (kullanım analitiği, isteğe bağlı)
 
 ## 4. Hukuki sebep
 
@@ -57,20 +63,25 @@ rızanızla** işlenir.
 Diğer veriler:
 - Abonelik yönetimi: KVKK m.5/2-c (sözleşmenin ifası)
 - Kötüye kullanım önleme: KVKK m.5/2-f (meşru menfaat)
+- Çökme raporları: KVKK m.5/2-f (meşru menfaat); Ayarlar'dan kapatılabilir
+- Kullanım analitiği: KVKK m.5/1 (açık rıza; Ayarlar'da seçeneği açmanız)
 
 ## 5. Toplama yöntemi
 
 Veriler, uygulama içinde doğrudan sizin tarafınızdan girilir. İzin
 verdiğiniz takdirde Apple Sağlık uygulamasından da okunabilir. Arka
-planda otomatik olarak toplanan kişisel veri bulunmamaktadır.
+planda otomatik olarak toplanan tek veri, Ayarlar'dan kapatabileceğiniz
+çökme raporlarıdır; kullanım analitiği yalnızca siz açarsanız toplanır.
+Bunların hiçbiri sağlık verisi içermez.
 
 ## 6. Aktarım
 
 **Yurt içi aktarım:** Yoktur. Döngü ve belirti verileriniz sunucularımıza
 aktarılmaz, cihazınızda kalır.
 
-**Yurt dışı aktarım:** Yalnızca aşağıdaki durumlarda ve yalnızca ayrıca
-verdiğiniz açık rıza ile:
+**Yurt dışı aktarım:** Yalnızca aşağıdaki alıcılara. Sağlık verisi
+içeren aktarımlar (Cloudflare, Google Gemini, Anthropic) ve kullanım
+analitiği yalnızca ayrıca verdiğiniz açık rıza ile yapılır:
 
 | Alıcı | Aktarılan veri | Amaç |
 |---|---|---|
@@ -78,16 +89,21 @@ verdiğiniz açık rıza ile:
 | Google LLC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, dil | Tek seferlik yorum üretimi (Gemini) |
 | Anthropic, PBC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, yazdığınız sohbet mesajları, dil | Sohbet yanıtı üretimi (Claude) |
 | RevenueCat, Inc. (ABD) | Anonim kullanıcı kimliği, abonelik durumu | Abonelik doğrulama |
+| Google LLC (ABD) — Firebase Crashlytics | Çökme anındaki hata bilgisi, cihaz modeli, sürüm, kurulum kimliği | Hata tespiti (Ayarlar'dan kapatılabilir) |
+| Google LLC (ABD) — Firebase Analytics | Açılan ekranlar, satın alma adımları, sohbet mesajı gönderildi bilgisi (içeriksiz), cihaz modeli, yaklaşık ülke, uygulama kimliği | Uygulamayı geliştirme (yalnızca siz açarsanız) |
 
-Bu aktarımlar KVKK m.9 kapsamında **açık rızanıza** dayanır. Rıza
-vermezseniz uygulama cihaz üstü ve kural tabanlı olarak çalışmaya devam
+Sağlık verisi içeren aktarımlar ve kullanım analitiği KVKK m.9 kapsamında
+**açık rızanıza** dayanır. Çökme raporları ve abonelik doğrulaması sağlık
+verisi içermez. Rıza vermezseniz uygulama cihaz üstü ve kural tabanlı olarak çalışmaya devam
 eder; temel işlevlerin hiçbiri kapanmaz.
 
 ## 7. Saklama süresi
 
 Verileriniz siz silene kadar cihazınızda saklanır. Uygulamayı
 sildiğinizde cihazdaki veriler de silinir. Yapay zekâ sağlayıcısına
-gönderilen veriler tarafımızca saklanmaz.
+gönderilen veriler tarafımızca saklanmaz. Çökme raporları Google
+Firebase'de en fazla 90 gün, kullanım analitiği olay düzeyinde en fazla
+2 ay saklanır.
 
 ## 8. Haklarınız (KVKK m.11)
 

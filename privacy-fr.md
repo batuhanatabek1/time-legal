@@ -13,16 +13,15 @@
 TiMe est une app de suivi du cycle menstruel. Tes données sont **stockées
 sur ton appareil par défaut.** Aucun compte n'est nécessaire. Nous ne
 conservons pas tes données de cycle sur nos serveurs. Nous ne partageons
-aucune donnée avec des réseaux publicitaires. L'app ne contient aucun
-logiciel d'analyse.
+aucune donnée avec des réseaux publicitaires. Les statistiques d'utilisation ne fonctionnent que si tu les actives dans Réglages ; tes données de santé ne sont jamais envoyées aux statistiques.
 
-Tes données ne quittent ton appareil que dans les cas suivants, chacun
-nécessitant ton choix explicite :
+Tes données ne quittent ton appareil que dans les cas suivants, chacun sous ton contrôle :
 
 1. **Commentaires IA et discussion** — quand tu actives le modèle en ligne pour la discussion ou quand le modèle embarqué n'est pas
    disponible et que tu as donné ton consentement
 2. **Échange avec Apple Santé (HealthKit)** — quand tu l'autorises
 3. **Achats d'abonnement**
+4. **Rapports de plantage et statistiques d'utilisation** — les rapports de plantage sont activés par défaut et peuvent être désactivés ; les statistiques seulement si tu les actives
 
 Détails ci-dessous.
 
@@ -120,13 +119,18 @@ créé sur ton appareil. Il ne peut pas être relié à toi, sert uniquement à
 compter les requêtes quotidiennes et est réinitialisé à la suppression de
 l'app.
 
+**e) Rapports de plantage et statistiques d'utilisation (Google Firebase)**
+
+- **Rapports de plantage (Firebase Crashlytics) :** si l'app plante, l'emplacement de l'erreur dans le code, le modèle d'appareil, la version d'iOS, la version de l'app et un identifiant d'installation aléatoire sont envoyés à Google. Le rapport ne contient ni cycles, ni symptômes, ni notes, ni autre donnée de santé. Activés par défaut ; désactive-les dans Réglages > Confidentialité > « Rapports de plantage ».
+- **Statistiques d'utilisation (Firebase Analytics) :** **désactivées** par défaut ; elles ne fonctionnent que si tu actives Réglages > Confidentialité > « Statistiques d'utilisation ». Dans ce cas, les écrans principaux ouverts, la fin de la configuration, l'affichage de l'écran d'abonnement et les étapes d'achat (nom du produit compris) sont envoyés, avec un identifiant d'app aléatoire. Les cycles, symptômes, dates, notes et contenus de discussion ne sont **jamais** envoyés. Sont aussi envoyés le fait qu'un message de discussion a été envoyé (sans son contenu) et le résultat de la restauration des achats. Firebase enregistre aussi automatiquement des informations de base comme la première ouverture, le début de session, le temps passé dans l'app, le modèle d'appareil, la version d'iOS et le pays approximatif déduit de l'adresse IP. L'identifiant publicitaire (IDFA) n'est pas collecté et la publicité personnalisée est désactivée. Désactiver l'option supprime l'identifiant d'analyse sur ton appareil.
+
 ### 2.3 Données que nous ne collectons pas
 
 - Nom, e-mail, numéro de téléphone
 - Localisation
 - Identifiant publicitaire (IDFA)
 - Contacts, photos, appareil photo, micro
-- Statistiques d'utilisation (l'app ne contient aucun SDK d'analyse)
+- Toute statistique contenant des données de santé
 
 ### 2.4 Fonctions non proposées actuellement
 
@@ -160,15 +164,15 @@ Si tu consens aux commentaires IA en ligne, les données listées au
 | Cloudflare, Inc. | Serveur proxy | États-Unis |
 | Google LLC | Fournisseur d'IA — commentaire ponctuel (Gemini) | États-Unis |
 | Anthropic, PBC | Fournisseur d'IA — discussion (Claude) | États-Unis |
+| Google LLC | Rapports de plantage et statistiques d'utilisation (Firebase) — §2.2(e) | États-Unis |
 
-Ce transfert repose sur ton **consentement explicite.** Sans
-consentement, aucune donnée n'est transférée et l'app continue de
-fonctionner sur l'appareil.
+Les transferts liés à l'IA et aux statistiques d'utilisation reposent sur ton **consentement explicite.** Les rapports de plantage ne contiennent aucune donnée de santé ; si tu ne veux pas les envoyer, désactive-les dans Réglages. Sans consentement pour l'IA, tes données de cycle et de symptômes ne sont pas transférées et l'app continue de fonctionner sur l'appareil.
 
 Notre proxy **n'enregistre pas** tes données de santé.
 
 Conditions des fournisseurs :
 - Google : https://ai.google.dev/gemini-api/terms
+- Google Firebase : https://firebase.google.com/support/privacy
 - Anthropic : https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -180,6 +184,8 @@ Conditions des fournisseurs :
 - **Données envoyées au fournisseur d'IA :** non conservées par nous
   après la génération de la réponse.
 - **Identifiant anti-abus :** 24 heures.
+- **Rapports de plantage :** jusqu'à 90 jours chez Google Firebase.
+- **Statistiques d'utilisation :** données au niveau des événements jusqu'à 2 mois chez Google Analytics.
 - **Données d'abonnement :** conservées par Apple et RevenueCat selon les
   obligations légales.
 

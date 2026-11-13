@@ -37,6 +37,8 @@ Personal Data ("KVKK").
 - Transaction security data: a random device identifier (UUID) generated
   by the app
 - App preferences: language, units, notification times
+- Technical data (can be turned off in Settings): error details at the time of a crash, device model, iOS and app version, random installation ID
+- Usage data (only if you turn it on): main screens opened, subscription screen and purchase steps, that a chat message was sent (without content), the result of restoring purchases, device model, iOS version, approximate country, random app ID
 
 **Data we do not collect:** first name, last name, email, phone, national
 ID number, location, advertising identifier.
@@ -50,6 +52,8 @@ ID number, location, advertising identifier.
 - Exchanging data with the Apple Health app
 - Managing subscriptions
 - Preventing misuse of the service
+- Detecting and fixing app errors (crash reports)
+- Improving the app (usage analytics, optional)
 
 ## 4. Legal basis
 
@@ -59,20 +63,20 @@ consent under KVKK Art. 6.**
 Other data:
 - Subscription management: KVKK Art. 5/2-c (performance of a contract)
 - Misuse prevention: KVKK Art. 5/2-f (legitimate interest)
+- Crash reports: KVKK Art. 5/2-f (legitimate interest); can be turned off in Settings
+- Usage analytics: KVKK Art. 5/1 (explicit consent, given by turning the option on in Settings)
 
 ## 5. Method of collection
 
 You enter the data directly in the app. If you give permission, it can
-also be read from the Apple Health app. No personal data is collected
-automatically in the background.
+also be read from the Apple Health app. The only data collected automatically in the background is crash reports, which you can turn off in Settings; usage analytics is collected only if you turn it on. Neither contains health data.
 
 ## 6. Transfers
 
 **Domestic transfers:** None. Your cycle and symptom data is not
 transferred to our servers; it stays on your device.
 
-**International transfers:** Only in the following cases and only with
-your separate explicit consent:
+**International transfers:** Only to the recipients below. Transfers containing health data (Cloudflare, Google Gemini, Anthropic) and usage analytics happen only with your separate explicit consent:
 
 | Recipient | Data transferred | Purpose |
 |---|---|---|
@@ -80,16 +84,17 @@ your separate explicit consent:
 | Google LLC (USA) | Cycle lengths, phase, symptom tags, language | Generating one-off comments (Gemini) |
 | Anthropic, PBC (USA) | Cycle lengths, phase, symptom tags, chat messages you type, language | Generating chat replies (Claude) |
 | RevenueCat, Inc. (USA) | Anonymous user ID, subscription status | Subscription verification |
+| Google LLC (USA) — Firebase Crashlytics | Error details at the time of a crash, device model, version, installation ID | Error detection (can be turned off in Settings) |
+| Google LLC (USA) — Firebase Analytics | Screens opened, purchase steps, chat message sent (no content), device model, approximate country, app ID | Improving the app (only if you turn it on) |
 
-These transfers rely on your **explicit consent** under KVKK Art. 9. If
+Transfers containing health data and usage analytics rely on your **explicit consent** under KVKK Art. 9. Crash reports and subscription verification contain no health data. If
 you do not consent, the app keeps working on-device and rule-based; none
 of the core features are disabled.
 
 ## 7. Retention period
 
 Your data is stored on your device until you delete it. When you delete
-the app, the data on the device is deleted too. We do not retain data
-sent to the AI provider.
+the app, the data on the device is deleted too. We do not retain data sent to the AI provider. Crash reports are kept in Google Firebase for up to 90 days, usage analytics at event level for up to 2 months.
 
 ## 8. Your rights (KVKK Art. 11)
 

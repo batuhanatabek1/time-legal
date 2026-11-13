@@ -9,16 +9,18 @@
 
 TiMe bir adet döngüsü takip uygulamasıdır. Verileriniz **varsayılan olarak
 yalnızca telefonunuzda saklanır.** Hesap açmanız gerekmez. Sunucularımızda
-döngü verinizi tutmuyoruz. Reklam ağlarıyla veri paylaşmıyoruz. Uygulamada
-analitik yazılımı bulunmuyor.
+döngü verinizi tutmuyoruz. Reklam ağlarıyla veri paylaşmıyoruz. Kullanım analitiği yalnızca siz
+Ayarlar'dan açarsanız çalışır; sağlık veriniz analitiğe hiçbir zaman gitmez.
 
-Verinin cihazınızdan çıktığı durumlar sınırlıdır ve her biri sizin açık
-tercihinize bağlıdır:
+Verinin cihazınızdan çıktığı durumlar sınırlıdır ve her biri sizin
+kontrolünüzdedir:
 
 1. **Yapay zekâ yorumu ve sohbeti** — cihaz üstü model kullanılamadığında ya da sohbet için çevrimiçi modeli siz açtığınızda
    ve siz açıkça onay verdiğinizde
 2. **Apple Sağlık (HealthKit)** ile veri alışverişi — siz izin verdiğinizde
 3. **Abonelik işlemleri** — satın alma yaptığınızda
+4. **Çökme raporları ve kullanım analitiği** — çökme raporları varsayılan
+   olarak açıktır ve kapatılabilir; kullanım analitiği yalnızca siz açarsanız
 
 Her birinin ayrıntısı aşağıdadır.
 
@@ -117,13 +119,29 @@ rastgele üretilen bir kimlik (UUID) kullanılır. Bu kimlik sizinle
 ilişkilendirilemez, yalnızca günlük istek sayısını saymak için kullanılır
 ve uygulama silindiğinde sıfırlanır.
 
+**e) Çökme raporları ve kullanım analitiği (Google Firebase)**
+
+- **Çökme raporları (Firebase Crashlytics):** Uygulama çökerse hatanın
+  oluştuğu kod yeri, cihaz modeli, iOS sürümü, uygulama sürümü ve rastgele
+  bir kurulum kimliği Google'a gönderilir. Bu rapor döngü, belirti, not
+  veya başka bir sağlık verisi içermez. Varsayılan olarak açıktır;
+  Ayarlar > Gizlilik > "Çökme raporları" ile kapatabilirsiniz.
+- **Kullanım analitiği (Firebase Analytics):** Varsayılan olarak
+  **kapalıdır**; yalnızca Ayarlar > Gizlilik > "Kullanım analitiği"
+  seçeneğini açarsanız çalışır. Açıksa hangi ana ekranların
+  açıldığı, kurulumun tamamlandığı, abonelik ekranının gösterildiği ve
+  satın alma adımları (ürün adı dahil) ile rastgele bir uygulama kimliği
+  gönderilir. Döngü, belirti, tarih, not ve sohbet içeriği **hiçbir zaman**
+  gönderilmez. Ayrıca sohbette mesaj gönderildiği (içerik olmadan) ve satın alımları geri yükleme sonucu gönderilir. Firebase de ilk açılış, oturum başlangıcı, kullanım süresi, cihaz modeli, iOS sürümü ve IP adresinden çıkarılan yaklaşık ülke gibi temel bilgileri otomatik kaydeder. Reklam kimliği (IDFA) toplanmaz, reklam kişiselleştirmesi
+  kapalıdır. Seçeneği kapattığınızda cihazdaki analitik kimliği silinir.
+
 ### 2.3 Toplamadığımız veriler
 
 - Ad, soyad, e-posta, telefon numarası
 - Konum bilgisi
 - Reklam kimliği (IDFA)
 - Kişi listesi, fotoğraflar, kamera, mikrofon
-- Kullanım analitiği (uygulamada analitik yazılımı bulunmamaktadır)
+- Sağlık verisi içeren herhangi bir analitik
 
 ### 2.4 Şu an sunulmayan özellikler
 
@@ -144,6 +162,8 @@ ve rızanız ayrıca istenir.
 | Bildirim gönderimi | Tahmin tarihleri, seçtiğiniz saatler | Açık rıza |
 | Abonelik yönetimi | Anonim kimlik, abonelik durumu | Sözleşmenin ifası |
 | Kötüye kullanım önleme | Rastgele cihaz kimliği | Meşru menfaat |
+| Çökme raporları | Teknik hata bilgisi, kurulum kimliği | Meşru menfaat (kapatılabilir) |
+| Kullanım analitiği | Ekran ve satın alma adımları, uygulama kimliği | Açık rıza (Ayarlar'dan açma) |
 
 Özel nitelikli kişisel veriler yalnızca **açık rızanız** ile işlenir.
 Rızanızı istediğiniz an geri alabilirsiniz.
@@ -160,15 +180,19 @@ listelenen veriler yurt dışında bulunan sunuculara aktarılır.
 | Cloudflare, Inc. | Aracı sunucu (proxy) | ABD |
 | Google LLC | Yapay zekâ sağlayıcısı — tek seferlik yorum (Gemini) | ABD |
 | Anthropic, PBC | Yapay zekâ sağlayıcısı — sohbet (Claude) | ABD |
+| Google LLC | Çökme raporları ve kullanım analitiği (Firebase) — §2.2(e) | ABD |
 
-Bu aktarım, KVKK kapsamında **açık rızanıza** dayanmaktadır. Onay
-vermezseniz hiçbir veriniz yurt dışına aktarılmaz ve uygulama cihaz üstü
+Yapay zekâ ve kullanım analitiği aktarımları KVKK kapsamında **açık
+rızanıza** dayanır. Çökme raporlarında sağlık verisi bulunmaz; bu aktarımı
+istemezseniz Ayarlar'dan çökme raporlarını kapatabilirsiniz. Yapay zekâ
+için onay vermezseniz döngü ve belirti verileriniz yurt dışına aktarılmaz ve uygulama cihaz üstü
 ve kural tabanlı olarak çalışmaya devam eder.
 
 Aracı sunucumuz sağlık verinizi **kayıt altına almaz (loglamaz).**
 
 Sağlayıcıların veri işleme koşulları:
 - Google: https://ai.google.dev/gemini-api/terms
+- Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -180,6 +204,8 @@ Sağlayıcıların veri işleme koşulları:
 - **Uzak sağlayıcıya gönderilen veriler:** Yanıt üretildikten sonra
   tarafımızca saklanmaz.
 - **Kötüye kullanım önleme kimliği:** 24 saat.
+- **Çökme raporları:** Google Firebase'de en fazla 90 gün.
+- **Kullanım analitiği:** Google Analytics'te olay düzeyinde en fazla 2 ay.
 - **Abonelik kayıtları:** Yasal saklama süresi boyunca, Apple ve
   RevenueCat nezdinde.
 

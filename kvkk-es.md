@@ -37,6 +37,8 @@ de Datos Personales («KVKK»).
 - Datos de seguridad de las operaciones: un identificador aleatorio del
   dispositivo (UUID) generado por la app
 - Preferencias de la app: idioma, unidades, horas de notificación
+- Datos técnicos (se pueden desactivar en Ajustes): detalles del error en el momento de un fallo, modelo del dispositivo, versión de iOS y de la app, identificador de instalación aleatorio
+- Datos de uso (solo si los activas): pantallas principales abiertas, pantalla de suscripción y pasos de compra, que se envió un mensaje en el chat (sin contenido), resultado de restaurar compras, modelo del dispositivo, versión de iOS, país aproximado, identificador de app aleatorio
 
 **Datos que no recopilamos:** nombre, apellidos, correo, teléfono, número
 de identidad, ubicación, identificador publicitario.
@@ -50,6 +52,8 @@ de identidad, ubicación, identificador publicitario.
 - Intercambiar datos con la app Apple Salud
 - Gestionar suscripciones
 - Prevenir el uso indebido del servicio
+- Detectar y corregir errores de la app (informes de fallos)
+- Mejorar la app (analítica de uso, opcional)
 
 ## 4. Base jurídica
 
@@ -59,20 +63,20 @@ consentimiento explícito conforme al art. 6 de la KVKK.**
 Otros datos:
 - Gestión de suscripciones: KVKK art. 5/2-c (ejecución de un contrato)
 - Prevención de usos indebidos: KVKK art. 5/2-f (interés legítimo)
+- Informes de fallos: KVKK art. 5/2-f (interés legítimo); se pueden desactivar en Ajustes
+- Analítica de uso: KVKK art. 5/1 (consentimiento explícito, dado al activar la opción en Ajustes)
 
 ## 5. Forma de recogida
 
 Introduces los datos directamente en la app. Si lo permites, también
-pueden leerse desde la app Apple Salud. No se recogen datos personales
-automáticamente en segundo plano.
+pueden leerse desde la app Apple Salud. Los únicos datos que se recogen automáticamente en segundo plano son los informes de fallos, que puedes desactivar en Ajustes; la analítica de uso solo se recoge si la activas. Ninguno contiene datos de salud.
 
 ## 6. Transferencias
 
 **Transferencias nacionales:** ninguna. Tus datos del ciclo y síntomas no
 se transfieren a nuestros servidores; se quedan en tu dispositivo.
 
-**Transferencias internacionales:** solo en los siguientes casos y solo
-con tu consentimiento explícito separado:
+**Transferencias internacionales:** solo a los destinatarios siguientes. Las transferencias que contienen datos de salud (Cloudflare, Google Gemini, Anthropic) y la analítica de uso solo se realizan con tu consentimiento explícito separado:
 
 | Destinatario | Datos transferidos | Finalidad |
 |---|---|---|
@@ -80,16 +84,16 @@ con tu consentimiento explícito separado:
 | Google LLC (EE. UU.) | Duración de ciclos, fase, etiquetas de síntomas, idioma | Comentarios puntuales (Gemini) |
 | Anthropic, PBC (EE. UU.) | Duración de ciclos, fase, etiquetas de síntomas, mensajes de chat, idioma | Respuestas del chat (Claude) |
 | RevenueCat, Inc. (EE. UU.) | ID de usuario anónimo, estado de la suscripción | Verificación de la suscripción |
+| Google LLC (EE. UU.) — Firebase Crashlytics | Detalles del error en el momento de un fallo, modelo del dispositivo, versión, identificador de instalación | Detección de errores (se puede desactivar en Ajustes) |
+| Google LLC (EE. UU.) — Firebase Analytics | Pantallas abiertas, pasos de compra, mensaje de chat enviado (sin contenido), modelo del dispositivo, país aproximado, identificador de app | Mejorar la app (solo si la activas) |
 
-Estas transferencias se basan en tu **consentimiento explícito** conforme
-al art. 9 de la KVKK. Si no lo das, la app sigue funcionando en el
+Las transferencias que contienen datos de salud y la analítica de uso se basan en tu **consentimiento explícito** conforme al art. 9 de la KVKK. Los informes de fallos y la verificación de suscripciones no contienen datos de salud. Si no lo das, la app sigue funcionando en el
 dispositivo y con reglas; no se desactiva ninguna función básica.
 
 ## 7. Plazo de conservación
 
 Tus datos se guardan en tu dispositivo hasta que los elimines. Al eliminar
-la app, también se eliminan los datos del dispositivo. No conservamos los
-datos enviados al proveedor de IA.
+la app, también se eliminan los datos del dispositivo. No conservamos los datos enviados al proveedor de IA. Los informes de fallos se guardan en Google Firebase hasta 90 días y la analítica de uso a nivel de evento hasta 2 meses.
 
 ## 8. Tus derechos (KVKK art. 11)
 

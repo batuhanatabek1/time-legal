@@ -13,16 +13,15 @@
 TiMe è un'app per monitorare il ciclo mestruale. I tuoi dati sono
 **salvati sul tuo dispositivo per impostazione predefinita.** Non serve un
 account. Non conserviamo i tuoi dati sul ciclo sui nostri server. Non
-condividiamo dati con reti pubblicitarie. L'app non contiene software di
-analisi.
+condividiamo dati con reti pubblicitarie. Le statistiche di utilizzo funzionano solo se le attivi nelle Impostazioni; i tuoi dati sanitari non finiscono mai nelle statistiche.
 
-I tuoi dati lasciano il dispositivo solo in questi casi, ognuno dei quali
-richiede una tua scelta esplicita:
+I tuoi dati lasciano il dispositivo solo in questi casi, ognuno sotto il tuo controllo:
 
 1. **Commenti IA e chat** — quando attivi il modello online per la chat o quando il modello sul dispositivo non è
    disponibile e hai dato il consenso
 2. **Scambio con Apple Salute (HealthKit)** — quando concedi il permesso
 3. **Acquisti di abbonamenti**
+4. **Segnalazioni di arresto anomalo e statistiche di utilizzo** — le segnalazioni sono attive per impostazione predefinita e si possono disattivare; le statistiche solo se le attivi
 
 Dettagli qui sotto.
 
@@ -117,13 +116,18 @@ Per prevenire abusi delle richieste IA, sul dispositivo viene creato un
 identificativo casuale (UUID). Non può essere collegato a te, serve solo
 a contare le richieste giornaliere e si azzera quando elimini l'app.
 
+**e) Segnalazioni di arresto anomalo e statistiche di utilizzo (Google Firebase)**
+
+- **Segnalazioni di arresto anomalo (Firebase Crashlytics):** se l'app si arresta, vengono inviati a Google il punto del codice in cui si è verificato l'errore, il modello del dispositivo, la versione di iOS, la versione dell'app e un identificativo di installazione casuale. La segnalazione non contiene cicli, sintomi, note né altri dati sanitari. Attive per impostazione predefinita; disattivale in Impostazioni > Privacy > «Segnalazioni di arresto anomalo».
+- **Statistiche di utilizzo (Firebase Analytics):** **disattivate** per impostazione predefinita; funzionano solo se attivi Impostazioni > Privacy > «Statistiche di utilizzo». Se attive, vengono inviati quali schermate principali vengono aperte, il completamento della configurazione, la visualizzazione della schermata di abbonamento e i passaggi di acquisto (nome del prodotto compreso), insieme a un identificativo dell'app casuale. Cicli, sintomi, date, note e contenuti della chat non vengono **mai** inviati. Vengono inviati anche il fatto che è stato inviato un messaggio in chat (senza contenuto) e l'esito del ripristino degli acquisti. Firebase registra inoltre automaticamente informazioni di base come la prima apertura, l'inizio della sessione, il tempo di utilizzo, il modello del dispositivo, la versione di iOS e il paese approssimativo ricavato dall'indirizzo IP. L'identificativo pubblicitario (IDFA) non viene raccolto e la pubblicità personalizzata è disattivata. Disattivando l'opzione, l'identificativo di analisi sul dispositivo viene eliminato.
+
 ### 2.3 Dati che non raccogliamo
 
 - Nome, email, numero di telefono
 - Posizione
 - Identificativo pubblicitario (IDFA)
 - Contatti, foto, fotocamera, microfono
-- Analisi d'uso (l'app non contiene SDK di analisi)
+- Qualsiasi statistica che contenga dati sanitari
 
 ### 2.4 Funzioni non offerte al momento
 
@@ -157,15 +161,15 @@ trasferiti a server fuori dal tuo paese.
 | Cloudflare, Inc. | Server proxy | USA |
 | Google LLC | Fornitore di IA — commento singolo (Gemini) | USA |
 | Anthropic, PBC | Fornitore di IA — chat (Claude) | USA |
+| Google LLC | Segnalazioni di arresto anomalo e statistiche di utilizzo (Firebase) — §2.2(e) | USA |
 
-Questo trasferimento si basa sul tuo **consenso esplicito.** Senza
-consenso nessun dato viene trasferito e l'app continua a funzionare sul
-dispositivo.
+I trasferimenti per l'IA e per le statistiche di utilizzo si basano sul tuo **consenso esplicito.** Le segnalazioni di arresto anomalo non contengono dati sanitari; se non vuoi inviarle, disattivale nelle Impostazioni. Senza consenso per l'IA, i tuoi dati su ciclo e sintomi non vengono trasferiti e l'app continua a funzionare sul dispositivo.
 
 Il nostro proxy **non registra** i tuoi dati sanitari.
 
 Condizioni dei fornitori:
 - Google: https://ai.google.dev/gemini-api/terms
+- Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -177,6 +181,8 @@ Condizioni dei fornitori:
 - **Dati inviati al fornitore di IA:** non li conserviamo dopo la
   generazione della risposta.
 - **Identificativo anti-abuso:** 24 ore.
+- **Segnalazioni di arresto anomalo:** fino a 90 giorni presso Google Firebase.
+- **Statistiche di utilizzo:** dati a livello di evento fino a 2 mesi presso Google Analytics.
 - **Dati sugli abbonamenti:** come richiesto dalla legge, presso Apple e
   RevenueCat.
 

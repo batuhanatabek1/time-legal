@@ -36,6 +36,8 @@ personenbezogener Daten („KVKK“).
 - Daten zur Transaktionssicherheit: eine von der App erzeugte zufällige
   Gerätekennung (UUID)
 - App-Einstellungen: Sprache, Einheiten, Benachrichtigungszeiten
+- Technische Daten (in den Einstellungen abschaltbar): Fehlerangaben zum Zeitpunkt eines Absturzes, Gerätemodell, iOS- und App-Version, zufällige Installations-ID
+- Nutzungsdaten (nur wenn du sie einschaltest): geöffnete Hauptbildschirme, Abo-Bildschirm und Kaufschritte, dass eine Chatnachricht gesendet wurde (ohne Inhalt), Ergebnis der Kaufwiederherstellung, Gerätemodell, iOS-Version, ungefähres Land, zufällige App-ID
 
 **Nicht erhobene Daten:** Vor- und Nachname, E-Mail, Telefon,
 Personalausweisnummer, Standort, Werbe-ID.
@@ -49,6 +51,8 @@ Personalausweisnummer, Standort, Werbe-ID.
 - Datenaustausch mit der Apple-Health-App
 - Aboverwaltung
 - Verhinderung von Missbrauch des Dienstes
+- Erkennung und Behebung von App-Fehlern (Absturzberichte)
+- Verbesserung der App (Nutzungsanalyse, optional)
 
 ## 4. Rechtsgrundlage
 
@@ -58,20 +62,20 @@ ausdrücklichen Einwilligung nach KVKK Art. 6** verarbeitet.
 Weitere Daten:
 - Aboverwaltung: KVKK Art. 5/2-c (Vertragserfüllung)
 - Missbrauchsschutz: KVKK Art. 5/2-f (berechtigtes Interesse)
+- Absturzberichte: KVKK Art. 5/2-f (berechtigtes Interesse); in den Einstellungen abschaltbar
+- Nutzungsanalyse: KVKK Art. 5/1 (ausdrückliche Einwilligung durch Einschalten in den Einstellungen)
 
 ## 5. Art der Erhebung
 
 Du gibst die Daten direkt in der App ein. Mit deiner Erlaubnis können sie
-auch aus der Apple-Health-App gelesen werden. Im Hintergrund werden keine
-personenbezogenen Daten automatisch erhoben.
+auch aus der Apple-Health-App gelesen werden. Automatisch im Hintergrund erhoben werden nur Absturzberichte, die du in den Einstellungen abschalten kannst; Nutzungsanalysen nur, wenn du sie einschaltest. Beides enthält keine Gesundheitsdaten.
 
 ## 6. Übermittlungen
 
 **Inländische Übermittlung:** Keine. Deine Zyklus- und Symptomdaten werden
 nicht an unsere Server übermittelt; sie bleiben auf deinem Gerät.
 
-**Übermittlung ins Ausland:** Nur in folgenden Fällen und nur mit deiner
-gesonderten ausdrücklichen Einwilligung:
+**Übermittlung ins Ausland:** Nur an die folgenden Empfänger. Übermittlungen mit Gesundheitsdaten (Cloudflare, Google Gemini, Anthropic) und die Nutzungsanalyse erfolgen nur mit deiner gesonderten ausdrücklichen Einwilligung:
 
 | Empfänger | Übermittelte Daten | Zweck |
 |---|---|---|
@@ -79,16 +83,16 @@ gesonderten ausdrücklichen Einwilligung:
 | Google LLC (USA) | Zykluslängen, Phase, Symptom-Tags, Sprache | Einmalige Kommentare (Gemini) |
 | Anthropic, PBC (USA) | Zykluslängen, Phase, Symptom-Tags, deine Chatnachrichten, Sprache | Chat-Antworten (Claude) |
 | RevenueCat, Inc. (USA) | Anonyme Nutzer-ID, Abostatus | Aboprüfung |
+| Google LLC (USA) — Firebase Crashlytics | Fehlerangaben zum Absturzzeitpunkt, Gerätemodell, Version, Installations-ID | Fehlererkennung (in den Einstellungen abschaltbar) |
+| Google LLC (USA) — Firebase Analytics | Geöffnete Bildschirme, Kaufschritte, Chatnachricht gesendet (ohne Inhalt), Gerätemodell, ungefähres Land, App-ID | Verbesserung der App (nur wenn du sie einschaltest) |
 
-Diese Übermittlungen beruhen auf deiner **ausdrücklichen Einwilligung**
-nach KVKK Art. 9. Ohne Einwilligung funktioniert die App weiter auf dem
+Übermittlungen mit Gesundheitsdaten und die Nutzungsanalyse beruhen auf deiner **ausdrücklichen Einwilligung** nach KVKK Art. 9. Absturzberichte und Aboprüfung enthalten keine Gesundheitsdaten. Ohne Einwilligung funktioniert die App weiter auf dem
 Gerät und regelbasiert; keine Kernfunktion wird abgeschaltet.
 
 ## 7. Speicherdauer
 
 Deine Daten werden auf deinem Gerät gespeichert, bis du sie löschst. Beim
-Löschen der App werden auch die Daten auf dem Gerät gelöscht. An den
-KI-Anbieter gesendete Daten speichern wir nicht.
+Löschen der App werden auch die Daten auf dem Gerät gelöscht. An den KI-Anbieter gesendete Daten speichern wir nicht. Absturzberichte werden bei Google Firebase bis zu 90 Tage gespeichert, Nutzungsanalysen auf Ereignisebene bis zu 2 Monate.
 
 ## 8. Deine Rechte (KVKK Art. 11)
 

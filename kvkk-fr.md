@@ -37,6 +37,8 @@ la protection des données personnelles (« KVKK »).
 - Données de sécurité des transactions : un identifiant d'appareil
   aléatoire (UUID) généré par l'app
 - Préférences de l'app : langue, unités, heures de notification
+- Données techniques (désactivables dans Réglages) : détails de l'erreur au moment d'un plantage, modèle d'appareil, versions d'iOS et de l'app, identifiant d'installation aléatoire
+- Données d'utilisation (seulement si tu les actives) : écrans principaux ouverts, écran d'abonnement et étapes d'achat, envoi d'un message de discussion (sans contenu), résultat de la restauration des achats, modèle d'appareil, version d'iOS, pays approximatif, identifiant d'app aléatoire
 
 **Données non collectées :** prénom, nom, e-mail, téléphone, numéro
 d'identité, localisation, identifiant publicitaire.
@@ -50,6 +52,8 @@ d'identité, localisation, identifiant publicitaire.
 - Échanger des données avec l'app Apple Santé
 - Gérer les abonnements
 - Prévenir les abus du service
+- Détecter et corriger les erreurs de l'app (rapports de plantage)
+- Améliorer l'app (statistiques d'utilisation, facultatives)
 
 ## 4. Base juridique
 
@@ -59,20 +63,20 @@ consentement explicite au titre de l'art. 6 de la KVKK.**
 Autres données :
 - Gestion des abonnements : KVKK art. 5/2-c (exécution d'un contrat)
 - Prévention des abus : KVKK art. 5/2-f (intérêt légitime)
+- Rapports de plantage : KVKK art. 5/2-f (intérêt légitime) ; désactivables dans Réglages
+- Statistiques d'utilisation : KVKK art. 5/1 (consentement explicite, donné en activant l'option dans Réglages)
 
 ## 5. Mode de collecte
 
 Tu saisis les données directement dans l'app. Avec ton autorisation,
-elles peuvent aussi être lues depuis l'app Apple Santé. Aucune donnée
-personnelle n'est collectée automatiquement en arrière-plan.
+elles peuvent aussi être lues depuis l'app Apple Santé. Les seules données collectées automatiquement en arrière-plan sont les rapports de plantage, que tu peux désactiver dans Réglages ; les statistiques d'utilisation ne sont collectées que si tu les actives. Aucune ne contient de données de santé.
 
 ## 6. Transferts
 
 **Transferts nationaux :** aucun. Tes données de cycle et de symptômes ne
 sont pas transférées à nos serveurs ; elles restent sur ton appareil.
 
-**Transferts internationaux :** uniquement dans les cas suivants et
-uniquement avec ton consentement explicite distinct :
+**Transferts internationaux :** uniquement vers les destinataires ci-dessous. Les transferts contenant des données de santé (Cloudflare, Google Gemini, Anthropic) et les statistiques d'utilisation n'ont lieu qu'avec ton consentement explicite distinct :
 
 | Destinataire | Données transférées | Finalité |
 |---|---|---|
@@ -80,16 +84,16 @@ uniquement avec ton consentement explicite distinct :
 | Google LLC (États-Unis) | Durée des cycles, phase, symptômes, langue | Commentaires ponctuels (Gemini) |
 | Anthropic, PBC (États-Unis) | Durée des cycles, phase, symptômes, messages de discussion, langue | Réponses de discussion (Claude) |
 | RevenueCat, Inc. (États-Unis) | ID utilisateur anonyme, état de l'abonnement | Vérification de l'abonnement |
+| Google LLC (États-Unis) — Firebase Crashlytics | Détails de l'erreur au moment d'un plantage, modèle d'appareil, version, identifiant d'installation | Détection des erreurs (désactivable dans Réglages) |
+| Google LLC (États-Unis) — Firebase Analytics | Écrans ouverts, étapes d'achat, message de discussion envoyé (sans contenu), modèle d'appareil, pays approximatif, identifiant d'app | Amélioration de l'app (seulement si tu l'actives) |
 
-Ces transferts reposent sur ton **consentement explicite** au titre de
-l'art. 9 de la KVKK. Sans consentement, l'app continue de fonctionner sur
+Les transferts contenant des données de santé et les statistiques d'utilisation reposent sur ton **consentement explicite** au titre de l'art. 9 de la KVKK. Les rapports de plantage et la vérification d'abonnement ne contiennent aucune donnée de santé. Sans consentement, l'app continue de fonctionner sur
 l'appareil et par règles ; aucune fonction essentielle n'est désactivée.
 
 ## 7. Durée de conservation
 
 Tes données sont conservées sur ton appareil jusqu'à ce que tu les
-supprimes. Supprimer l'app supprime aussi les données de l'appareil. Nous
-ne conservons pas les données envoyées au fournisseur d'IA.
+supprimes. Supprimer l'app supprime aussi les données de l'appareil. Nous ne conservons pas les données envoyées au fournisseur d'IA. Les rapports de plantage sont conservés jusqu'à 90 jours chez Google Firebase, les statistiques d'utilisation au niveau des événements jusqu'à 2 mois.
 
 ## 8. Tes droits (KVKK art. 11)
 

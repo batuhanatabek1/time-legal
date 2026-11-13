@@ -13,17 +13,16 @@
 TiMe ist eine App zur Aufzeichnung des Menstruationszyklus. Deine Daten
 werden **standardmäßig auf deinem Gerät gespeichert.** Ein Konto ist
 nicht nötig. Wir speichern deine Zyklusdaten nicht auf unseren Servern.
-Wir teilen keine Daten mit Werbenetzwerken. Die App enthält keine
-Analysesoftware.
+Wir teilen keine Daten mit Werbenetzwerken. Nutzungsanalysen laufen nur, wenn du sie in den Einstellungen einschaltest; deine Gesundheitsdaten gehen nie in Analysen.
 
-Deine Daten verlassen dein Gerät nur in diesen Fällen, jeweils nach
-deiner ausdrücklichen Entscheidung:
+Deine Daten verlassen dein Gerät nur in diesen Fällen, jeweils unter deiner Kontrolle:
 
 1. **KI-Kommentare und Chat** — wenn du für den Chat das Online-Modell einschaltest oder das Modell auf dem Gerät nicht
    verfügbar ist und du eingewilligt hast
 2. **Austausch mit Apple Health (HealthKit)** — wenn du die Berechtigung
    erteilst
 3. **Abo-Käufe**
+4. **Absturzberichte und Nutzungsanalyse** — Absturzberichte sind standardmäßig an und lassen sich ausschalten; Nutzungsanalyse nur, wenn du sie einschaltest
 
 Details unten.
 
@@ -121,13 +120,18 @@ zufällig erzeugte Kennung (UUID) erstellt. Sie kann nicht mit dir
 verknüpft werden, dient nur zum Zählen täglicher Anfragen und wird beim
 Löschen der App zurückgesetzt.
 
+**e) Absturzberichte und Nutzungsanalyse (Google Firebase)**
+
+- **Absturzberichte (Firebase Crashlytics):** Wenn die App abstürzt, werden die Codestelle des Fehlers, das Gerätemodell, die iOS-Version, die App-Version und eine zufällige Installations-ID an Google gesendet. Der Bericht enthält keine Zyklen, Symptome, Notizen oder anderen Gesundheitsdaten. Standardmäßig an; ausschalten unter Einstellungen > Datenschutz > „Absturzberichte“.
+- **Nutzungsanalyse (Firebase Analytics):** Standardmäßig **aus**; sie läuft nur, wenn du Einstellungen > Datenschutz > „Nutzungsanalyse“ einschaltest. Dann wird gesendet, welche Hauptbildschirme geöffnet werden, der Abschluss der Einrichtung, das Anzeigen des Abo-Bildschirms und Kaufschritte (inklusive Produktname), zusammen mit einer zufälligen App-ID. Zyklen, Symptome, Daten, Notizen und Chat-Inhalte werden **nie** gesendet. Außerdem wird gesendet, dass eine Chatnachricht gesendet wurde (ohne Inhalt), sowie das Ergebnis der Kaufwiederherstellung. Firebase erfasst zusätzlich automatisch Basisinformationen wie erstes Öffnen, Sitzungsbeginn, Nutzungsdauer, Gerätemodell, iOS-Version und das aus der IP-Adresse abgeleitete ungefähre Land. Die Werbe-ID (IDFA) wird nicht erhoben, personalisierte Werbung ist aus. Beim Ausschalten wird die Analyse-ID auf deinem Gerät gelöscht.
+
 ### 2.3 Daten, die wir nicht erheben
 
 - Name, E-Mail, Telefonnummer
 - Standort
 - Werbe-ID (IDFA)
 - Kontakte, Fotos, Kamera, Mikrofon
-- Nutzungsanalysen (die App enthält kein Analyse-SDK)
+- Analysen, die Gesundheitsdaten enthalten
 
 ### 2.4 Derzeit nicht angebotene Funktionen
 
@@ -162,15 +166,15 @@ genannten Daten an Server außerhalb deines Landes übermittelt.
 | Cloudflare, Inc. | Proxy-Server | USA |
 | Google LLC | KI-Anbieter — einmaliger Kommentar (Gemini) | USA |
 | Anthropic, PBC | KI-Anbieter — Chat (Claude) | USA |
+| Google LLC | Absturzberichte und Nutzungsanalyse (Firebase) — §2.2(e) | USA |
 
-Diese Übermittlung beruht auf deiner **ausdrücklichen Einwilligung.**
-Ohne Einwilligung werden keine Daten übermittelt und die App funktioniert
-weiter auf dem Gerät.
+KI- und Nutzungsanalyse-Übermittlungen beruhen auf deiner **ausdrücklichen Einwilligung.** Absturzberichte enthalten keine Gesundheitsdaten; wenn du sie nicht senden willst, schalte sie in den Einstellungen aus. Ohne Einwilligung für die KI werden deine Zyklus- und Symptomdaten nicht übermittelt und die App funktioniert weiter auf dem Gerät.
 
 Unser Proxy **protokolliert** deine Gesundheitsdaten **nicht.**
 
 Datenbedingungen der Anbieter:
 - Google: https://ai.google.dev/gemini-api/terms
+- Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
 ---
@@ -182,6 +186,8 @@ Datenbedingungen der Anbieter:
 - **An den KI-Anbieter gesendete Daten:** werden von uns nach Erstellung
   der Antwort nicht gespeichert.
 - **Kennung zum Missbrauchsschutz:** 24 Stunden.
+- **Absturzberichte:** bis zu 90 Tage bei Google Firebase.
+- **Nutzungsanalyse:** Daten auf Ereignisebene bis zu 2 Monate bei Google Analytics.
 - **Abo-Aufzeichnungen:** wie gesetzlich vorgeschrieben, bei Apple und
   RevenueCat.
 

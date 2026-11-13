@@ -37,6 +37,8 @@ protezione dei dati personali («KVKK»).
 - Dati di sicurezza delle operazioni: un identificativo casuale del
   dispositivo (UUID) generato dall'app
 - Preferenze dell'app: lingua, unità, orari delle notifiche
+- Dati tecnici (disattivabili nelle Impostazioni): dettagli dell'errore al momento di un arresto anomalo, modello del dispositivo, versione di iOS e dell'app, identificativo di installazione casuale
+- Dati di utilizzo (solo se li attivi): schermate principali aperte, schermata di abbonamento e passaggi di acquisto, invio di un messaggio in chat (senza contenuto), esito del ripristino degli acquisti, modello del dispositivo, versione di iOS, paese approssimativo, identificativo dell'app casuale
 
 **Dati non raccolti:** nome, cognome, email, telefono, numero di
 identità, posizione, identificativo pubblicitario.
@@ -50,6 +52,8 @@ identità, posizione, identificativo pubblicitario.
 - Scambiare dati con l'app Apple Salute
 - Gestire gli abbonamenti
 - Prevenire l'uso improprio del servizio
+- Individuare e correggere gli errori dell'app (segnalazioni di arresto anomalo)
+- Migliorare l'app (statistiche di utilizzo, facoltative)
 
 ## 4. Base giuridica
 
@@ -59,20 +63,20 @@ consenso esplicito ai sensi dell'art. 6 della KVKK.**
 Altri dati:
 - Gestione degli abbonamenti: KVKK art. 5/2-c (esecuzione di un contratto)
 - Prevenzione degli abusi: KVKK art. 5/2-f (legittimo interesse)
+- Segnalazioni di arresto anomalo: KVKK art. 5/2-f (legittimo interesse); disattivabili nelle Impostazioni
+- Statistiche di utilizzo: KVKK art. 5/1 (consenso esplicito, dato attivando l'opzione nelle Impostazioni)
 
 ## 5. Modalità di raccolta
 
 Inserisci i dati direttamente nell'app. Se lo consenti, possono essere
-letti anche dall'app Apple Salute. Nessun dato personale viene raccolto
-automaticamente in background.
+letti anche dall'app Apple Salute. Gli unici dati raccolti automaticamente in background sono le segnalazioni di arresto anomalo, che puoi disattivare nelle Impostazioni; le statistiche di utilizzo vengono raccolte solo se le attivi. Nessuno dei due contiene dati sanitari.
 
 ## 6. Trasferimenti
 
 **Trasferimenti nazionali:** nessuno. I tuoi dati su ciclo e sintomi non
 vengono trasferiti ai nostri server; restano sul dispositivo.
 
-**Trasferimenti internazionali:** solo nei casi seguenti e solo con il tuo
-consenso esplicito separato:
+**Trasferimenti internazionali:** solo verso i destinatari seguenti. I trasferimenti che contengono dati sanitari (Cloudflare, Google Gemini, Anthropic) e le statistiche di utilizzo avvengono solo con il tuo consenso esplicito separato:
 
 | Destinatario | Dati trasferiti | Finalità |
 |---|---|---|
@@ -80,17 +84,17 @@ consenso esplicito separato:
 | Google LLC (USA) | Durata dei cicli, fase, etichette dei sintomi, lingua | Commenti singoli (Gemini) |
 | Anthropic, PBC (USA) | Durata dei cicli, fase, etichette dei sintomi, messaggi di chat, lingua | Risposte in chat (Claude) |
 | RevenueCat, Inc. (USA) | ID utente anonimo, stato dell'abbonamento | Verifica dell'abbonamento |
+| Google LLC (USA) — Firebase Crashlytics | Dettagli dell'errore al momento di un arresto anomalo, modello del dispositivo, versione, identificativo di installazione | Individuazione degli errori (disattivabile nelle Impostazioni) |
+| Google LLC (USA) — Firebase Analytics | Schermate aperte, passaggi di acquisto, messaggio in chat inviato (senza contenuto), modello del dispositivo, paese approssimativo, identificativo dell'app | Miglioramento dell'app (solo se lo attivi) |
 
-Questi trasferimenti si basano sul tuo **consenso esplicito** ai sensi
-dell'art. 9 della KVKK. Senza consenso l'app continua a funzionare sul
+I trasferimenti che contengono dati sanitari e le statistiche di utilizzo si basano sul tuo **consenso esplicito** ai sensi dell'art. 9 della KVKK. Le segnalazioni di arresto anomalo e la verifica degli abbonamenti non contengono dati sanitari. Senza consenso l'app continua a funzionare sul
 dispositivo e basata su regole; nessuna funzione essenziale viene
 disattivata.
 
 ## 7. Periodo di conservazione
 
 I tuoi dati restano sul dispositivo finché non li elimini. Eliminando
-l'app vengono eliminati anche i dati sul dispositivo. Non conserviamo i
-dati inviati al fornitore di IA.
+l'app vengono eliminati anche i dati sul dispositivo. Non conserviamo i dati inviati al fornitore di IA. Le segnalazioni di arresto anomalo sono conservate presso Google Firebase fino a 90 giorni, le statistiche di utilizzo a livello di evento fino a 2 mesi.
 
 ## 8. I tuoi diritti (KVKK art. 11)
 
