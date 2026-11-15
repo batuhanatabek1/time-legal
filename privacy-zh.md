@@ -133,8 +133,7 @@ TiMe 会首先使用**你设备自带的 AI 模型**生成点评。这种情况�
 | 接收方 | 角色 | 国家 |
 |---|---|---|
 | Cloudflare, Inc. | 代理服务器 | 美国 |
-| Google LLC | AI 提供方 — 单次点评（Gemini） | 美国 |
-| Anthropic, PBC | AI 提供方 — 对话（Claude） | 美国 |
+| Anthropic, PBC | AI 提供方 — 点评和对话（Claude） | 美国 |
 | Google LLC | 崩溃报告和使用情况分析（Firebase）— §2.2(e) | 美国 |
 
 与 AI 和使用情况分析相关的传输以你的**明确同意**为依据。崩溃报告不包含健康数据；如果你不想发送，可在设置中关闭崩溃报告。如果你不同意使用 AI，你的周期和症状数据不会被传输，应用将继续在设备端运行。
@@ -142,7 +141,6 @@ TiMe 会首先使用**你设备自带的 AI 模型**生成点评。这种情况�
 我们的代理服务器**不会记录**你的健康数据。
 
 提供方的数据条款：
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

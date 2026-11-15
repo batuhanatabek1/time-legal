@@ -162,8 +162,7 @@ Si tu consens aux commentaires IA en ligne, les données listées au
 | Destinataire | Rôle | Pays |
 |---|---|---|
 | Cloudflare, Inc. | Serveur proxy | États-Unis |
-| Google LLC | Fournisseur d'IA — commentaire ponctuel (Gemini) | États-Unis |
-| Anthropic, PBC | Fournisseur d'IA — discussion (Claude) | États-Unis |
+| Anthropic, PBC | Fournisseur d'IA — commentaires et discussion (Claude) | États-Unis |
 | Google LLC | Rapports de plantage et statistiques d'utilisation (Firebase) — §2.2(e) | États-Unis |
 
 Les transferts liés à l'IA et aux statistiques d'utilisation reposent sur ton **consentement explicite.** Les rapports de plantage ne contiennent aucune donnée de santé ; si tu ne veux pas les envoyer, désactive-les dans Réglages. Sans consentement pour l'IA, tes données de cycle et de symptômes ne sont pas transférées et l'app continue de fonctionner sur l'appareil.
@@ -171,7 +170,6 @@ Les transferts liés à l'IA et aux statistiques d'utilisation reposent sur ton 
 Notre proxy **n'enregistre pas** tes données de santé.
 
 Conditions des fournisseurs :
-- Google : https://ai.google.dev/gemini-api/terms
 - Google Firebase : https://firebase.google.com/support/privacy
 - Anthropic : https://www.anthropic.com/legal/commercial-terms
 

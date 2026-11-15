@@ -178,8 +178,7 @@ listelenen veriler yurt dışında bulunan sunuculara aktarılır.
 | Alıcı | Rol | Ülke |
 |---|---|---|
 | Cloudflare, Inc. | Aracı sunucu (proxy) | ABD |
-| Google LLC | Yapay zekâ sağlayıcısı — tek seferlik yorum (Gemini) | ABD |
-| Anthropic, PBC | Yapay zekâ sağlayıcısı — sohbet (Claude) | ABD |
+| Anthropic, PBC | Yapay zekâ sağlayıcısı — yorum ve sohbet (Claude) | ABD |
 | Google LLC | Çökme raporları ve kullanım analitiği (Firebase) — §2.2(e) | ABD |
 
 Yapay zekâ ve kullanım analitiği aktarımları KVKK kapsamında **açık
@@ -191,7 +190,6 @@ ve kural tabanlı olarak çalışmaya devam eder.
 Aracı sunucumuz sağlık verinizi **kayıt altına almaz (loglamaz).**
 
 Sağlayıcıların veri işleme koşulları:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

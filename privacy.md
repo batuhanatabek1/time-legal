@@ -152,8 +152,7 @@ transferred to servers outside your country.
 | Recipient | Role | Country |
 |---|---|---|
 | Cloudflare, Inc. | Proxy server | USA |
-| Google LLC | AI provider — one-off comment (Gemini) | USA |
-| Anthropic, PBC | AI provider — chat (Claude) | USA |
+| Anthropic, PBC | AI provider — comments and chat (Claude) | USA |
 | Google LLC | Crash reports and usage analytics (Firebase) — §2.2(e) | USA |
 
 AI and usage analytics transfers rely on your **explicit consent.** Crash reports contain no health data; if you don't want them sent, turn crash reports off in Settings. If you do not consent to AI, your cycle and symptom data is not transferred and the app continues to work on-device.
@@ -161,7 +160,6 @@ AI and usage analytics transfers rely on your **explicit consent.** Crash report
 Our proxy does **not log** your health data.
 
 Providers' data terms:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

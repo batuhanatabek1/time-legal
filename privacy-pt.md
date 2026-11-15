@@ -159,8 +159,7 @@ Se você consentir com comentários de IA online, os dados listados no
 | Destinatário | Função | País |
 |---|---|---|
 | Cloudflare, Inc. | Servidor proxy | EUA |
-| Google LLC | Provedor de IA — comentário avulso (Gemini) | EUA |
-| Anthropic, PBC | Provedor de IA — conversa (Claude) | EUA |
+| Anthropic, PBC | Provedor de IA — comentários e conversa (Claude) | EUA |
 | Google LLC | Relatórios de falhas e análise de uso (Firebase) — §2.2(e) | EUA |
 
 As transferências de IA e de análise de uso se baseiam no seu **consentimento específico.** Os relatórios de falhas não contêm dados de saúde; se não quiser enviá-los, desative-os em Ajustes. Sem consentimento para a IA, seus dados de ciclo e sintomas não são transferidos e o app continua funcionando no aparelho.
@@ -168,7 +167,6 @@ As transferências de IA e de análise de uso se baseiam no seu **consentimento 
 Nosso proxy **não registra** seus dados de saúde.
 
 Termos de dados dos provedores:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

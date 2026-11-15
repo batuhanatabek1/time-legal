@@ -133,8 +133,7 @@ AI 요청 남용을 막기 위해 기기에서 무작위 식별자(UUID)를 만�
 | 수령자 | 역할 | 국가 |
 |---|---|---|
 | Cloudflare, Inc. | 프록시 서버 | 미국 |
-| Google LLC | AI 제공업체 — 일회성 코멘트(Gemini) | 미국 |
-| Anthropic, PBC | AI 제공업체 — 채팅(Claude) | 미국 |
+| Anthropic, PBC | AI 제공업체 — 코멘트와 채팅(Claude) | 미국 |
 | Google LLC | 충돌 보고서와 사용 분석(Firebase) — §2.2(e) | 미국 |
 
 AI와 사용 분석에 관한 이전은 사용자의 **명시적 동의**에 근거해요. 충돌 보고서에는 건강 데이터가 없어요. 보내고 싶지 않다면 설정에서 충돌 보고서를 끄세요. AI에 동의하지 않으면 주기와 증상 데이터는 이전되지 않고 앱은 기기에서 계속 작동해요.
@@ -142,7 +141,6 @@ AI와 사용 분석에 관한 이전은 사용자의 **명시적 동의**에 근
 저희 프록시는 건강 데이터를 **기록하지 않아요.**
 
 제공업체의 데이터 약관:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

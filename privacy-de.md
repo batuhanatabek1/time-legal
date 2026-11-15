@@ -164,8 +164,7 @@ genannten Daten an Server außerhalb deines Landes übermittelt.
 | Empfänger | Rolle | Land |
 |---|---|---|
 | Cloudflare, Inc. | Proxy-Server | USA |
-| Google LLC | KI-Anbieter — einmaliger Kommentar (Gemini) | USA |
-| Anthropic, PBC | KI-Anbieter — Chat (Claude) | USA |
+| Anthropic, PBC | KI-Anbieter — Kommentare und Chat (Claude) | USA |
 | Google LLC | Absturzberichte und Nutzungsanalyse (Firebase) — §2.2(e) | USA |
 
 KI- und Nutzungsanalyse-Übermittlungen beruhen auf deiner **ausdrücklichen Einwilligung.** Absturzberichte enthalten keine Gesundheitsdaten; wenn du sie nicht senden willst, schalte sie in den Einstellungen aus. Ohne Einwilligung für die KI werden deine Zyklus- und Symptomdaten nicht übermittelt und die App funktioniert weiter auf dem Gerät.
@@ -173,7 +172,6 @@ KI- und Nutzungsanalyse-Übermittlungen beruhen auf deiner **ausdrücklichen Ein
 Unser Proxy **protokolliert** deine Gesundheitsdaten **nicht.**
 
 Datenbedingungen der Anbieter:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

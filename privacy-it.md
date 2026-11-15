@@ -159,8 +159,7 @@ trasferiti a server fuori dal tuo paese.
 | Destinatario | Ruolo | Paese |
 |---|---|---|
 | Cloudflare, Inc. | Server proxy | USA |
-| Google LLC | Fornitore di IA — commento singolo (Gemini) | USA |
-| Anthropic, PBC | Fornitore di IA — chat (Claude) | USA |
+| Anthropic, PBC | Fornitore di IA — comments and chat (Claude) | USA |
 | Google LLC | Segnalazioni di arresto anomalo e statistiche di utilizzo (Firebase) — §2.2(e) | USA |
 
 I trasferimenti per l'IA e per le statistiche di utilizzo si basano sul tuo **consenso esplicito.** Le segnalazioni di arresto anomalo non contengono dati sanitari; se non vuoi inviarle, disattivale nelle Impostazioni. Senza consenso per l'IA, i tuoi dati su ciclo e sintomi non vengono trasferiti e l'app continua a funzionare sul dispositivo.
@@ -168,7 +167,6 @@ I trasferimenti per l'IA e per le statistiche di utilizzo si basano sul tuo **co
 Il nostro proxy **non registra** i tuoi dati sanitari.
 
 Condizioni dei fornitori:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

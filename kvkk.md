@@ -80,14 +80,13 @@ Bunların hiçbiri sağlık verisi içermez.
 aktarılmaz, cihazınızda kalır.
 
 **Yurt dışı aktarım:** Yalnızca aşağıdaki alıcılara. Sağlık verisi
-içeren aktarımlar (Cloudflare, Google Gemini, Anthropic) ve kullanım
+içeren aktarımlar (Cloudflare, Anthropic) ve kullanım
 analitiği yalnızca ayrıca verdiğiniz açık rıza ile yapılır:
 
 | Alıcı | Aktarılan veri | Amaç |
 |---|---|---|
 | Cloudflare, Inc. (ABD) | Yapay zekâ isteği içeriği (aracı sunucu) | İstek yönlendirme, kötüye kullanım önleme |
-| Google LLC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, dil | Tek seferlik yorum üretimi (Gemini) |
-| Anthropic, PBC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, yazdığınız sohbet mesajları, dil | Sohbet yanıtı üretimi (Claude) |
+| Anthropic, PBC (ABD) | Döngü uzunlukları, evre, belirti etiketleri, yazdığınız sohbet mesajları, dil | Yorum ve sohbet yanıtı üretimi (Claude) |
 | RevenueCat, Inc. (ABD) | Anonim kullanıcı kimliği, abonelik durumu | Abonelik doğrulama |
 | Google LLC (ABD) — Firebase Crashlytics | Çökme anındaki hata bilgisi, cihaz modeli, sürüm, kurulum kimliği | Hata tespiti (Ayarlar'dan kapatılabilir) |
 | Google LLC (ABD) — Firebase Analytics | Açılan ekranlar, satın alma adımları, sohbet mesajı gönderildi bilgisi (içeriksiz), cihaz modeli, yaklaşık ülke, uygulama kimliği | Uygulamayı geliştirme (yalnızca siz açarsanız) |
@@ -156,7 +155,7 @@ yazabilirsiniz. Başvurunuz en geç 30 gün içinde sonuçlandırılır.
 > uzunluklarım, döngü evrem, seçtiğim belirti etiketleri ve sohbet
 > ekranına yazdığım mesajların yorum üretilmesi amacıyla yurt dışında
 > bulunan aracı sunucuya (Cloudflare, Inc. — ABD) ve yapay zekâ
-> sağlayıcılarına (Google LLC ve Anthropic, PBC — ABD) aktarılmasına açık rıza veriyorum.
+> sağlayıcılarına (Anthropic, PBC — ABD) aktarılmasına açık rıza veriyorum.
 >
 > Bu verilerin özel nitelikli sağlık verisi içerdiğini ve aktarımın yurt
 > dışına yapıldığını anlıyorum.

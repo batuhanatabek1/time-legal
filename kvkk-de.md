@@ -75,13 +75,12 @@ auch aus der Apple-Health-App gelesen werden. Automatisch im Hintergrund erhoben
 **Inländische Übermittlung:** Keine. Deine Zyklus- und Symptomdaten werden
 nicht an unsere Server übermittelt; sie bleiben auf deinem Gerät.
 
-**Übermittlung ins Ausland:** Nur an die folgenden Empfänger. Übermittlungen mit Gesundheitsdaten (Cloudflare, Google Gemini, Anthropic) und die Nutzungsanalyse erfolgen nur mit deiner gesonderten ausdrücklichen Einwilligung:
+**Übermittlung ins Ausland:** Nur an die folgenden Empfänger. Übermittlungen mit Gesundheitsdaten (Cloudflare, Anthropic) und die Nutzungsanalyse erfolgen nur mit deiner gesonderten ausdrücklichen Einwilligung:
 
 | Empfänger | Übermittelte Daten | Zweck |
 |---|---|---|
 | Cloudflare, Inc. (USA) | Inhalt der KI-Anfrage (Proxy-Server) | Weiterleitung, Missbrauchsschutz |
-| Google LLC (USA) | Zykluslängen, Phase, Symptom-Tags, Sprache | Einmalige Kommentare (Gemini) |
-| Anthropic, PBC (USA) | Zykluslängen, Phase, Symptom-Tags, deine Chatnachrichten, Sprache | Chat-Antworten (Claude) |
+| Anthropic, PBC (USA) | Zykluslängen, Phase, Symptom-Tags, deine Chatnachrichten, Sprache | Kommentare und Chat-Antworten (Claude) |
 | RevenueCat, Inc. (USA) | Anonyme Nutzer-ID, Abostatus | Aboprüfung |
 | Google LLC (USA) — Firebase Crashlytics | Fehlerangaben zum Absturzzeitpunkt, Gerätemodell, Version, Installations-ID | Fehlererkennung (in den Einstellungen abschaltbar) |
 | Google LLC (USA) — Firebase Analytics | Geöffnete Bildschirme, Kaufschritte, Chatnachricht gesendet (ohne Inhalt), Gerätemodell, ungefähres Land, App-ID | Verbesserung der App (nur wenn du sie einschaltest) |
@@ -142,8 +141,7 @@ Anfrage wird spätestens innerhalb von 30 Tagen beantwortet.
 > ausdrücklich ein, dass meine Zykluslängen, meine Zyklusphase,
 > ausgewählte Symptom-Tags und die Nachrichten, die ich im Chat schreibe,
 > zum Erstellen von Kommentaren an einen Vermittlungsserver im Ausland
-> (Cloudflare, Inc. — USA) und an KI-Anbieter (Google LLC und
-> Anthropic, PBC — USA) übermittelt werden.
+> (Cloudflare, Inc. — USA) und an KI-Anbieter (Anthropic, PBC — USA) übermittelt werden.
 >
 > Mir ist bewusst, dass diese Daten besondere Kategorien von
 > Gesundheitsdaten enthalten und die Übermittlung ins Ausland erfolgt.

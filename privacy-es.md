@@ -159,8 +159,7 @@ indicados en el §2.2(a) se transfieren a servidores fuera de tu país.
 | Destinatario | Función | País |
 |---|---|---|
 | Cloudflare, Inc. | Servidor proxy | EE. UU. |
-| Google LLC | Proveedor de IA — comentario puntual (Gemini) | EE. UU. |
-| Anthropic, PBC | Proveedor de IA — chat (Claude) | EE. UU. |
+| Anthropic, PBC | Proveedor de IA — comentarios y chat (Claude) | EE. UU. |
 | Google LLC | Informes de fallos y analítica de uso (Firebase) — §2.2(e) | EE. UU. |
 
 Las transferencias de IA y de analítica de uso se basan en tu **consentimiento explícito.** Los informes de fallos no contienen datos de salud; si no quieres enviarlos, desactívalos en Ajustes. Si no das tu consentimiento para la IA, tus datos de ciclo y síntomas no se transfieren y la app sigue funcionando en el dispositivo.
@@ -168,7 +167,6 @@ Las transferencias de IA y de analítica de uso se basan en tu **consentimiento 
 Nuestro proxy **no registra** tus datos de salud.
 
 Condiciones de datos de los proveedores:
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 

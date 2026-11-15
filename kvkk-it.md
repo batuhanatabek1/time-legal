@@ -76,13 +76,12 @@ letti anche dall'app Apple Salute. Gli unici dati raccolti automaticamente in ba
 **Trasferimenti nazionali:** nessuno. I tuoi dati su ciclo e sintomi non
 vengono trasferiti ai nostri server; restano sul dispositivo.
 
-**Trasferimenti internazionali:** solo verso i destinatari seguenti. I trasferimenti che contengono dati sanitari (Cloudflare, Google Gemini, Anthropic) e le statistiche di utilizzo avvengono solo con il tuo consenso esplicito separato:
+**Trasferimenti internazionali:** solo verso i destinatari seguenti. I trasferimenti che contengono dati sanitari (Cloudflare, Anthropic) e le statistiche di utilizzo avvengono solo con il tuo consenso esplicito separato:
 
 | Destinatario | Dati trasferiti | Finalità |
 |---|---|---|
 | Cloudflare, Inc. (USA) | Contenuto della richiesta IA (server proxy) | Instradamento, prevenzione degli abusi |
-| Google LLC (USA) | Durata dei cicli, fase, etichette dei sintomi, lingua | Commenti singoli (Gemini) |
-| Anthropic, PBC (USA) | Durata dei cicli, fase, etichette dei sintomi, messaggi di chat, lingua | Risposte in chat (Claude) |
+| Anthropic, PBC (USA) | Durata dei cicli, fase, etichette dei sintomi, messaggi di chat, lingua | Commenti e risposte in chat (Claude) |
 | RevenueCat, Inc. (USA) | ID utente anonimo, stato dell'abbonamento | Verifica dell'abbonamento |
 | Google LLC (USA) — Firebase Crashlytics | Dettagli dell'errore al momento di un arresto anomalo, modello del dispositivo, versione, identificativo di installazione | Individuazione degli errori (disattivabile nelle Impostazioni) |
 | Google LLC (USA) — Firebase Analytics | Schermate aperte, passaggi di acquisto, messaggio in chat inviato (senza contenuto), modello del dispositivo, paese approssimativo, identificativo dell'app | Miglioramento dell'app (solo se lo attivi) |
@@ -148,7 +147,7 @@ funzionare.*
 > del ciclo, delle etichette dei sintomi scelte e dei messaggi che scrivo
 > in chat — allo scopo di generare commenti — verso un server
 > intermediario all'estero (Cloudflare, Inc. — USA) e verso fornitori di
-> IA (Google LLC e Anthropic, PBC — USA).
+> IA (Anthropic, PBC — USA).
 >
 > Comprendo che questi dati includono dati sanitari appartenenti a
 > categorie particolari e che il trasferimento avviene all'estero.

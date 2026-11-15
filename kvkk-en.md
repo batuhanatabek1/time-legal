@@ -76,13 +76,12 @@ also be read from the Apple Health app. The only data collected automatically in
 **Domestic transfers:** None. Your cycle and symptom data is not
 transferred to our servers; it stays on your device.
 
-**International transfers:** Only to the recipients below. Transfers containing health data (Cloudflare, Google Gemini, Anthropic) and usage analytics happen only with your separate explicit consent:
+**International transfers:** Only to the recipients below. Transfers containing health data (Cloudflare, Anthropic) and usage analytics happen only with your separate explicit consent:
 
 | Recipient | Data transferred | Purpose |
 |---|---|---|
 | Cloudflare, Inc. (USA) | AI request content (proxy server) | Request routing, misuse prevention |
-| Google LLC (USA) | Cycle lengths, phase, symptom tags, language | Generating one-off comments (Gemini) |
-| Anthropic, PBC (USA) | Cycle lengths, phase, symptom tags, chat messages you type, language | Generating chat replies (Claude) |
+| Anthropic, PBC (USA) | Cycle lengths, phase, symptom tags, chat messages you type, language | Generating comments and chat replies (Claude) |
 | RevenueCat, Inc. (USA) | Anonymous user ID, subscription status | Subscription verification |
 | Google LLC (USA) — Firebase Crashlytics | Error details at the time of a crash, device model, version, installation ID | Error detection (can be turned off in Settings) |
 | Google LLC (USA) — Firebase Analytics | Screens opened, purchase steps, chat message sent (no content), device model, approximate country, app ID | Improving the app (only if you turn it on) |
@@ -143,8 +142,7 @@ will be concluded within 30 days at the latest.
 > consent to the transfer of my cycle lengths, cycle phase, selected
 > symptom tags and the messages I type in the chat screen — for the
 > purpose of generating commentary — to an intermediary server abroad
-> (Cloudflare, Inc. — USA) and to AI providers (Google LLC and
-> Anthropic, PBC — USA).
+> (Cloudflare, Inc. — USA) and to AI providers (Anthropic, PBC — USA).
 >
 > I understand that this data includes special category health data and
 > that the transfer is made abroad.

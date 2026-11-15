@@ -133,8 +133,7 @@ AIリクエストの不正利用を防ぐため、端末内でランダムな識
 | 移転先 | 役割 | 国 |
 |---|---|---|
 | Cloudflare, Inc. | プロキシサーバー | 米国 |
-| Google LLC | AIプロバイダー — 単発のコメント（Gemini） | 米国 |
-| Anthropic, PBC | AIプロバイダー — チャット（Claude） | 米国 |
+| Anthropic, PBC | AIプロバイダー — コメントとチャット（Claude） | 米国 |
 | Google LLC | クラッシュレポートと利用状況の分析（Firebase）— §2.2(e) | 米国 |
 
 AIと利用状況の分析に関する移転は、あなたの**明示的な同意**に基づきます。クラッシュレポートには健康データは含まれません。送信したくない場合は、設定でクラッシュレポートをオフにしてください。AIに同意しない場合、周期と症状のデータは移転されず、アプリは端末上で引き続き動作します。
@@ -142,7 +141,6 @@ AIと利用状況の分析に関する移転は、あなたの**明示的な同�
 当社のプロキシは健康データを**記録しません。**
 
 各プロバイダーのデータ規約：
-- Google: https://ai.google.dev/gemini-api/terms
 - Google Firebase: https://firebase.google.com/support/privacy
 - Anthropic: https://www.anthropic.com/legal/commercial-terms
 
